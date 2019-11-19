@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+
+	<title>Crear Cliente</title>
+
+	<style type="text/css">
+		body{background-color: #BDBDBD;
+			 display: flex;
+    		 flex-wrap: wrap;
+             width: 100%;
+             margin: 30px;
+            }
+
+        form {width: 300px;
+		      padding: 50px;
+		      background-color: white;
+			  margin: 0 auto;
+			  font-family: "georgia";
+			  outline: none;
+			  text-align: right;
+			}    
+
+		button {border-radius: 0px;
+				display: inline-block;
+				padding: 20px 140px;
+				text-decoration: none;
+				text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+				box-shadow: 0 1px 1px rgba(0,0,0,0,0.3);
+				color: white;
+				background-color:#424242;
+		    }
+		 button:hover{
+			background-color: #369681;
+			color: white;
+			}	    	
+		}
+
+
+	</style>
+
+</head>
+
+<body>
+
+  
+
+	<form  action=""  method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit" > Crear </button>   
+	</form>
+	
+
+</body>
+</html>

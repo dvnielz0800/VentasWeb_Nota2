@@ -1,0 +1,6 @@
+Usuario:operador
+contraseña:olvidelacontra
+
+pagina de inicio:http://127.0.0.1:8000/aplicacion/inicio/
+editar cliente://127.0.0.1:8000/aplicacion/editar_cliente/rut
+editar cliente://127.0.0.1:8000/aplicacion/eliminar_cliente/rut 

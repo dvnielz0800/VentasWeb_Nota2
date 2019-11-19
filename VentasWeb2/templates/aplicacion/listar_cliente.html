@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+
+	<title>Listar Cliente</title>
+
+	<style type="text/css">
+		body{background-color: #BDBDBD;
+			 font-family: Arial;
+			 display: flex;
+    		 flex-wrap: wrap;
+             width: 100%;
+             margin: 30px;
+            }
+
+        
+
+		button {border-radius: 0px;
+				display: inline-block;
+				padding: 20px 140px;
+				text-decoration: none;
+				text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+				box-shadow: 0 1px 1px rgba(0,0,0,0,0.3);
+				color: white;
+				background-color:#424242;
+		    }
+
+		#main-container{width: 600px;
+						margin: 150px auto;
+
+			}
+
+		table { width: 100%;
+				background-color: white;
+				text-align: left; 
+				border-collapse: collapse;
+			}
+
+		td {
+			padding: 20px;
+			}
+
+		thead { background-color:#424242;
+				color: white; 
+				border-bottom: solid 5px black;
+			}
+
+		tr:nth-child(even) { background-color: #ddd;
+			}
+		tr:hover{
+			background-color: #369681;
+			color: white;
+		}					    
+	</style>
+
+</head>
+
+<body>
+
+	<div id="main-container">
+		<table>
+		<thead>
+			<tr>
+				<td>Nombre Completo</td>
+				<td>Correo Electronico</td>
+				<td>Rut</td>
+				<td>Telefono</td>
+			</tr>
+		</thead>
+			<tbody> 
+				{% for cliente in object_list %}
+				<tr>
+					<td>{{ cliente.Nombre_Completo }}</td>
+					<td>{{ cliente.Correo_Electronico }}</td>
+					<td>{{ cliente.Rut }}</td>
+					<td>{{ cliente.Telefono }}</td>
+				{% endfor %}	
+				</tr>	
+			</tbody>
+		</table>
+	</div>
+	
+	
+
+</body>
+</html>
